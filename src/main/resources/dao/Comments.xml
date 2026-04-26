@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.api.dao.CommentsDao">
+
+    <select id="findList" parameterType="com.study.api.dto.CommentsDTO" resultType="com.study.api.dto.CommentsDTO">
+        select
+        comments.*,
+        users.stu_name as name,
+        users.stu_img as headImg,
+        s.stu_name as nickNameTo,
+        s.stu_img as headerImgTo
+        from comments comments
+        left join student users on comments.from_stu_id = users.id
+        left join (select * from student) s on s.id = comments.to_stu_id
+        <where>
+            <if test="id != null and id != ''">and comments.id = #{id}</if>
+            <if test="fromStuId != null and fromStuId != ''">and comments.from_stu_id = #{fromStuId}</if>
+            <if test="content != null and content != ''">and comments.content = #{content}</if>
+            <if test="toStuId != null and toStuId != ''">and comments.to_stu_id = #{toStuId}</if>
+            <if test="parentId != null">and comments.parent_id = #{parentId}</if>
+            <if test="imgList != null and imgList != ''">and comments.img_list = #{imgList}</if>
+            <if test="createTime != null and createTime != ''">and comments.create_time = #{createTime}</if>
+            <if test="name != null and name != ''">and users.stu_name like concat('%',#{name},'%')</if>
+        </where>
+        <if test="isOrder != null">order by create_time desc</if>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.study.api.dto.CommentsDTO" resultType="java.lang.Integer">
+        select count(*) from comments comments
+        left join student users on comments.from_stu_id = users.id
+        left join (select * from student) s on s.id = comments.to_stu_id
+        <where>
+            <if test="id != null and id != ''">and comments.id = #{id}</if>
+            <if test="fromStuId != null and fromStuId != ''">and comments.from_stu_id = #{fromStuId}</if>
+            <if test="content != null and content != ''">and comments.content = #{content}</if>
+            <if test="toStuId != null and toStuId != ''">and comments.to_stu_id = #{toStuId}</if>
+            <if test="parentId != null">and comments.parent_id = #{parentId}</if>
+            <if test="imgList != null and imgList != ''">and comments.img_list = #{imgList}</if>
+            <if test="createTime != null and createTime != ''">and comments.create_time = #{createTime}</if>
+            <if test="name != null and name != ''">and users.stu_name like concat('%',#{name},'%')</if>
+        </where>
+    </select>
+
+</mapper>

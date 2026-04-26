@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.api.dao.BorrowDao">
+
+    <select id="findList" parameterType="com.study.api.dto.BorrowDTO" resultType="com.study.api.dto.BorrowDTO">
+        select
+        borrow.*,
+        student.stu_name,
+        student.stu_img
+        from borrow borrow
+        left join student student on borrow.stu_id = student.id
+        <where>
+            <if test="id != null and id != ''">and borrow.id = #{id}</if>
+            <if test="stuId != null and stuId != ''">and borrow.stu_id = #{stuId}</if>
+            <if test="name != null and name != ''">and borrow.name like concat('%',#{name},'%')</if>
+            <if test="img != null and img != ''">and borrow.img = #{img}</if>
+            <if test="info != null and info != ''">and borrow.info = #{info}</if>
+            <if test="createTime != null and createTime != ''">and borrow.create_time = #{createTime}</if>
+            <if test="tel != null and tel != ''">and borrow.tel = #{tel}</if>
+            <if test="stuName != null and stuName != ''">and student.stu_name like concat('%',#{stuName},'%')</if>
+            <if test="stuImg != null and stuImg != ''">and student.stu_img = #{stuImg}</if>
+        </where>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.study.api.dto.BorrowDTO" resultType="java.lang.Integer">
+        select count(*) from borrow borrow
+        left join student student on borrow.stu_id = student.id
+        <where>
+            <if test="id != null and id != ''">and borrow.id = #{id}</if>
+            <if test="stuId != null and stuId != ''">and borrow.stu_id = #{stuId}</if>
+            <if test="name != null and name != ''">and borrow.name like concat('%',#{name},'%')</if>
+            <if test="img != null and img != ''">and borrow.img = #{img}</if>
+            <if test="info != null and info != ''">and borrow.info = #{info}</if>
+            <if test="createTime != null and createTime != ''">and borrow.create_time = #{createTime}</if>
+            <if test="tel != null and tel != ''">and borrow.tel = #{tel}</if>
+            <if test="stuName != null and stuName != ''">and student.stu_name like concat('%',#{stuName},'%')</if>
+            <if test="stuImg != null and stuImg != ''">and student.stu_img = #{stuImg}</if>
+        </where>
+    </select>
+
+</mapper>

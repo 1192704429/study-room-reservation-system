@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.api.dao.StudentDao">
+
+    <select id="findList" parameterType="com.study.api.dto.StudentDTO" resultType="com.study.api.dto.StudentDTO">
+        select
+        student.*
+        from student student
+        <where>
+            <if test="id != null and id != ''">and student.id = #{id}</if>
+            <if test="stuName != null and stuName != ''">and student.stu_name like concat('%',#{stuName},'%')</if>
+            <if test="stuAge != null and stuAge != ''">and student.stu_age = #{stuAge}</if>
+            <if test="stuSex != null and stuSex != ''">and student.stu_sex = #{stuSex}</if>
+            <if test="stuPhone != null and stuPhone != ''">and student.stu_phone = #{stuPhone}</if>
+            <if test="stuAddress != null and stuAddress != ''">and student.stu_address = #{stuAddress}</if>
+            <if test="stuClassNum != null and stuClassNum != ''">and student.stu_class_num = #{stuClassNum}</if>
+            <if test="stuImg != null and stuImg != ''">and student.stu_img = #{stuImg}</if>
+            <if test="password != null and password != ''">and student.password = #{password}</if>
+            <if test="status != null and status != ''">and student.status = #{status}</if>
+        </where>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.study.api.dto.StudentDTO" resultType="java.lang.Integer">
+        select count(*) from student student
+        <where>
+            <if test="id != null and id != ''">and student.id = #{id}</if>
+            <if test="stuName != null and stuName != ''">and student.stu_name like concat('%',#{stuName},'%')</if>
+            <if test="stuAge != null and stuAge != ''">and student.stu_age = #{stuAge}</if>
+            <if test="stuSex != null and stuSex != ''">and student.stu_sex = #{stuSex}</if>
+            <if test="stuPhone != null and stuPhone != ''">and student.stu_phone = #{stuPhone}</if>
+            <if test="stuAddress != null and stuAddress != ''">and student.stu_address = #{stuAddress}</if>
+            <if test="stuClassNum != null and stuClassNum != ''">and student.stu_class_num = #{stuClassNum}</if>
+            <if test="stuImg != null and stuImg != ''">and student.stu_img = #{stuImg}</if>
+            <if test="password != null and password != ''">and student.password = #{password}</if>
+            <if test="status != null and status != ''">and student.status = #{status}</if>
+        </where>
+    </select>
+
+</mapper>

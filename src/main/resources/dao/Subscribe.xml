@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.api.dao.SubscribeDao">
+
+    <select id="findList" parameterType="com.study.api.dto.SubscribeDTO" resultType="com.study.api.dto.SubscribeDTO">
+        select
+        subscribe.*,
+        student.stu_name,
+        student.stu_img,
+        seat.number,
+        studyhall.name
+        from subscribe subscribe
+        left join student student on subscribe.stu_id = student.id
+		left join seat seat on subscribe.seat_id = seat.id
+		left join studyhall studyhall on subscribe.hall_id = studyhall.id
+        <where>
+            <if test="id != null and id != ''">and subscribe.id = #{id}</if>
+            <if test="stuId != null and stuId != ''">and subscribe.stu_id = #{stuId}</if>
+            <if test="hallId != null and hallId != ''">and subscribe.hall_id = #{hallId}</if>
+            <if test="seatId != null and seatId != ''">and subscribe.seat_id = #{seatId}</if>
+            <if test="status != null and status != ''">and subscribe.status = #{status}</if>
+            <if test="createTime != null and createTime != ''">and subscribe.create_time = #{createTime}</if>
+            <if test="stuName != null and stuName != ''">and student.stu_name like concat('%',#{stuName},'%')</if>
+            <if test="stuImg != null and stuImg != ''">and student.stu_img = #{stuImg}</if>
+            <if test="number != null and number != ''">and seat.number = #{number}</if>
+            <if test="name != null and name != ''">and studyhall.name like concat('%',#{name},'%')</if>
+        </where>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.study.api.dto.SubscribeDTO" resultType="java.lang.Integer">
+        select count(*) from subscribe subscribe
+        left join student student on subscribe.stu_id = student.id
+		left join seat seat on subscribe.seat_id = seat.id
+		left join studyhall studyhall on subscribe.hall_id = studyhall.id
+        <where>
+            <if test="id != null and id != ''">and subscribe.id = #{id}</if>
+            <if test="stuId != null and stuId != ''">and subscribe.stu_id = #{stuId}</if>
+            <if test="hallId != null and hallId != ''">and subscribe.hall_id = #{hallId}</if>
+            <if test="seatId != null and seatId != ''">and subscribe.seat_id = #{seatId}</if>
+            <if test="status != null and status != ''">and subscribe.status = #{status}</if>
+            <if test="createTime != null and createTime != ''">and subscribe.create_time = #{createTime}</if>
+            <if test="stuName != null and stuName != ''">and student.stu_name like concat('%',#{stuName},'%')</if>
+            <if test="stuImg != null and stuImg != ''">and student.stu_img = #{stuImg}</if>
+            <if test="number != null and number != ''">and seat.number = #{number}</if>
+            <if test="name != null and name != ''">and studyhall.name like concat('%',#{name},'%')</if>
+        </where>
+    </select>
+
+</mapper>

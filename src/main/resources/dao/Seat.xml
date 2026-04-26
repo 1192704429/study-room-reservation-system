@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.api.dao.SeatDao">
+
+    <select id="findList" parameterType="com.study.api.dto.SeatDTO" resultType="com.study.api.dto.SeatDTO">
+        select
+        seat.*,
+        studyhall.name
+        from seat seat
+        left join studyhall studyhall on seat.hall_id = studyhall.id
+        <where>
+            <if test="id != null and id != ''">and seat.id = #{id}</if>
+            <if test="number != null and number != ''">and seat.number = #{number}</if>
+            <if test="hallId != null and hallId != ''">and seat.hall_id = #{hallId}</if>
+            <if test="qrCode != null and qrCode != ''">and seat.qr_code = #{qrCode}</if>
+            <if test="status != null and status != ''">and seat.status = #{status}</if>
+            <if test="createTime != null and createTime != ''">and seat.create_time = #{createTime}</if>
+            <if test="name != null and name != ''">and studyhall.name like concat('%',#{name},'%')</if>
+        </where>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.study.api.dto.SeatDTO" resultType="java.lang.Integer">
+        select count(*) from seat seat
+        left join studyhall studyhall on seat.hall_id = studyhall.id
+        <where>
+            <if test="id != null and id != ''">and seat.id = #{id}</if>
+            <if test="number != null and number != ''">and seat.number = #{number}</if>
+            <if test="hallId != null and hallId != ''">and seat.hall_id = #{hallId}</if>
+            <if test="qrCode != null and qrCode != ''">and seat.qr_code = #{qrCode}</if>
+            <if test="status != null and status != ''">and seat.status = #{status}</if>
+            <if test="createTime != null and createTime != ''">and seat.create_time = #{createTime}</if>
+            <if test="name != null and name != ''">and studyhall.name like concat('%',#{name},'%')</if>
+        </where>
+    </select>
+
+</mapper>
