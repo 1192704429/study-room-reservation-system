@@ -18,7 +18,7 @@
 | 学生用户 | 小程序 |
 
 
-![功能模块图](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/azhou_promotion/img/module_structure/func_module_4ca4229908d34f3088d075213eccc543.png)
+![功能模块图](docs/images/01-func-module.png)
 
 
 ## 三、技术栈说明
@@ -51,59 +51,59 @@
 
 登录页：输入手机号密码登录自习室预约小程序
 
-![登录页：输入手机号密码登录自习室预约小程序](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/7c1f7c49-23aa-4908-8a3e-0479987b07ae.png)
+![登录页：输入手机号密码登录自习室预约小程序](docs/images/02-deng-lu.png)
 
 注册页：填写注册信息，完成自习室预约小程序账号注册
 
-![注册页：填写注册信息，完成自习室预约小程序账号注册](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/a2d9647b-1280-4d23-83b6-23abd228dde3.png)
+![注册页：填写注册信息，完成自习室预约小程序账号注册](docs/images/03-zhu-ce.png)
 
 列表页：展示可借还的书籍物品列表
 
-![列表页：展示可借还的书籍物品列表](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/b69a97c5-f578-4477-88dc-f3f73a64f66f.png)
+![列表页：展示可借还的书籍物品列表](docs/images/04-lie-biao.png)
 
 详情页：展示自习室详情，可选择座位进行预约
 
-![详情页：展示自习室详情，可选择座位进行预约](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/05c6c4c4-32be-41e4-8233-2410990faecd.png)
+![详情页：展示自习室详情，可选择座位进行预约](docs/images/05-xiang-qing.png)
 
 自习室列表页：展示可预约公共自习室及剩余空位信息
 
-![自习室列表页：展示可预约公共自习室及剩余空位信息](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/6d9beba9-10fb-45c1-81a7-3ea47726ebe9.png)
+![自习室列表页：展示可预约公共自习室及剩余空位信息](docs/images/06-zi-xi-shi-lie-biao.png)
 
 个人信息修改页：修改个人信息，确认后提交修改内容
 
-![个人信息修改页：修改个人信息，确认后提交修改内容](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/67da1e3a-8093-42c8-8a48-bf02eefc881e.png)
+![个人信息修改页：修改个人信息，确认后提交修改内容](docs/images/07-ge-ren-xin-xi-xiu-gai.png)
 
 预约记录页：查看自习室预约信息，可取消预约
 
-![预约记录页：查看自习室预约信息，可取消预约](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/915d06cf-f07a-4bdc-8beb-0161ee5f4a2b.png)
+![预约记录页：查看自习室预约信息，可取消预约](docs/images/08-yu-yue-ji-lu.png)
 
 扫码签到页：对已预约的自习室座位进行签到
 
-![扫码签到页：对已预约的自习室座位进行签到](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/167625f2-0c6f-4e0c-86b9-2fc0ca0d5cab.png)
+![扫码签到页：对已预约的自习室座位进行签到](docs/images/09-sao-ma-qian-dao.png)
 
 公告详情页：展示自习室预约小程序平台维护公告详情
 
-![公告详情页：展示自习室预约小程序平台维护公告详情](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/190b6927-89c8-4825-80a3-be4bd1c7d310.png)
+![公告详情页：展示自习室预约小程序平台维护公告详情](docs/images/10-gong-gao-xiang-qing.png)
 
 交流论坛页：展示用户交流帖子，支持用户回复讨论
 
-![交流论坛页：展示用户交流帖子，支持用户回复讨论](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/380e850d-27c6-46d5-84dc-85a1ddaf6861.png)
+![交流论坛页：展示用户交流帖子，支持用户回复讨论](docs/images/11-jiao-liu-lun-tan.png)
 
 交流论坛发布页：编辑内容，发布交流论坛的动态
 
-![交流论坛发布页：编辑内容，发布交流论坛的动态](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/bd757820-b0f8-4c2c-83dc-32599eaf0bd4.png)
+![交流论坛发布页：编辑内容，发布交流论坛的动态](docs/images/12-jiao-liu-lun-tan-fa-bu.png)
 
 物品详情页：展示待借还物品的详细信息
 
-![物品详情页：展示待借还物品的详细信息](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/e328b33e-cc69-43a6-89d5-a3a0fbb937d5.png)
+![物品详情页：展示待借还物品的详细信息](docs/images/13-wu-pin-xiang-qing.png)
 
 个人中心页：展示个人中心各功能入口供用户操作
 
-![个人中心页：展示个人中心各功能入口供用户操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/5f955e79-45a0-48f9-8c2e-0c6e5318fb8b.png)
+![个人中心页：展示个人中心各功能入口供用户操作](docs/images/14-ge-ren-zhong-xin.png)
 
 发布列表页：展示用户在交流论坛发布的内容列表
 
-![发布列表页：展示用户在交流论坛发布的内容列表](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/7c67efac-d396-4dac-8209-08a99f637d31.png)
+![发布列表页：展示用户在交流论坛发布的内容列表](docs/images/15-fa-bu-lie-biao.png)
 
 
 ---
@@ -130,43 +130,43 @@
 
 登录页：输入账号密码，登录管理员管理后台
 
-![登录页：输入账号密码，登录管理员管理后台](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/3bf1c4c8-9c49-456f-8c66-90795ffdbf59.png)
+![登录页：输入账号密码，登录管理员管理后台](docs/images/16-deng-lu.png)
 
 自习室管理页：展示自习室信息，支持增删改操作
 
-![自习室管理页：展示自习室信息，支持增删改操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/6da5338d-9c08-42ec-82c1-7ebde47bf0b8.png)
+![自习室管理页：展示自习室信息，支持增删改操作](docs/images/17-zi-xi-shi-guan-li.png)
 
 自习室分类管理：管理员对自习室分类进行增删改查管理
 
-![自习室分类管理：管理员对自习室分类进行增删改查管理](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/09352230-d7fb-4c6d-8c36-7ad6f63f9435.png)
+![自习室分类管理：管理员对自习室分类进行增删改查管理](docs/images/18-zi-xi-shi-fen-lei-guan-li.png)
 
 座位管理页：管理员管理自习室座位，可生成对应二维码
 
-![座位管理页：管理员管理自习室座位，可生成对应二维码](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/19ce2309-a74f-4cd0-8246-331f960048ba.png)
+![座位管理页：管理员管理自习室座位，可生成对应二维码](docs/images/19-zuo-wei-guan-li.png)
 
 系统公告管理：管理员修改系统公告的标题和内容信息
 
-![系统公告管理：管理员修改系统公告的标题和内容信息](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/5f1d8a70-e8b7-4c02-8413-732683d3a795.png)
+![系统公告管理：管理员修改系统公告的标题和内容信息](docs/images/20-xi-tong-gong-gao-guan-li.png)
 
 公告管理页：展示公告列表，支持管理员对公告进行管理
 
-![公告管理页：展示公告列表，支持管理员对公告进行管理](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/bdd71509-a2c8-47b3-8d02-d08129fd535e.png)
+![公告管理页：展示公告列表，支持管理员对公告进行管理](docs/images/21-gong-gao-guan-li.png)
 
 论坛管理页：管理员查看并管理交流论坛的用户发帖
 
-![论坛管理页：管理员查看并管理交流论坛的用户发帖](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/8c26e33f-5d96-4550-8680-278c4adb5319.png)
+![论坛管理页：管理员查看并管理交流论坛的用户发帖](docs/images/22-lun-tan-guan-li.png)
 
 借还管理：管理员查看并管理学生物品借还记录
 
-![借还管理：管理员查看并管理学生物品借还记录](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/e211bce4-3adb-45fe-84e2-1c9536f60a8c.png)
+![借还管理：管理员查看并管理学生物品借还记录](docs/images/23-jie-hai-guan-li.png)
 
 学生管理页：展示学生信息，支持搜索编辑删除操作
 
-![学生管理页：展示学生信息，支持搜索编辑删除操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/def2e273-8fe7-42be-8c56-9545eed576f7.png)
+![学生管理页：展示学生信息，支持搜索编辑删除操作](docs/images/24-xue-sheng-guan-li.png)
 
 预约记录管理页：查看和管理用户的自习室预约记录
 
-![预约记录管理页：查看和管理用户的自习室预约记录](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-04-26/a9ecc1e0-a753-4e17-813f-157286f8e570.png)
+![预约记录管理页：查看和管理用户的自习室预约记录](docs/images/25-yu-yue-ji-lu-guan-li.png)
 
 
 ## 五、主要业务流程
